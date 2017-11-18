@@ -3,3 +3,9 @@
 <p>
   <%= simple_format(@job.description) %>
 </p>
+
+wage_max : <%= @job.wage_upper_bound %>
+<br></br>
+wage_min : <%= @job.wage_lower_bound %>
+<br></br>
+contact_email : <%= @job.contact_email %>
