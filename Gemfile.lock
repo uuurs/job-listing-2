@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actioncable (5.0.0)
       actionpack (= 5.0.0)
@@ -194,6 +194,7 @@ DEPENDENCIES
   pg
   puma (~> 3.0)
   rails (~> 5.0.0)
+  rake (~> 12.1.0)
   sass-rails (~> 5.0)
   simple_form
   spring
