@@ -9,3 +9,8 @@ wage_max : <%= @job.wage_upper_bound %>
 wage_min : <%= @job.wage_lower_bound %>
 <br></br>
 contact_email : <%= @job.contact_email %>
+
+
+<div class="text-center" >
+  <%= link_to("send resume", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration:underline;") %>
+</div>
