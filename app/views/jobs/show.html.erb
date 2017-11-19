@@ -1,16 +1,19 @@
+<div class="text-center" >
 <h1><%= @job.title %> </h1>
 
 <p>
   <%= simple_format(@job.description) %>
 </p>
 
-wage_max : <%= @job.wage_upper_bound %>
+预算上限 : <%= @job.wage_upper_bound %>
 <br></br>
-wage_min : <%= @job.wage_lower_bound %>
+预算下限 : <%= @job.wage_lower_bound %>
 <br></br>
-contact_email : <%= @job.contact_email %>
+联系方式 : <%= @job.contact_email %>
+</div>
 
+<br></br>
 
 <div class="text-center" >
-  <%= link_to("send resume", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration:underline;") %>
+  <%= link_to("Send your ideal", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration:underline;") %>
 </div>

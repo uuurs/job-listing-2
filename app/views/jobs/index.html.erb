@@ -1,21 +1,16 @@
-<div class="pull-right">
-  <%= link_to("Add a job", new_job_path, :class => "btn btn-default") %>
-</div>
 
 <div class="dropdown clearfix pull-right">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
     range
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider  ">
     <li>
-      <%= link_to("range_with_wage_max", jobs_path(:order => "by_upper_bound")) %>
+      <%= link_to("根据预算上限排序", jobs_path(:order => "by_upper_bound")) %>
     </li>
+
     <li>
-      <%= link_to("range_with_wage_min", jobs_path(:order => "by_lower_bound")) %>
-    </li>
-    <li>
-      <%= link_to("range_with_updated", jobs_path) %>
+      <%= link_to("最新发表", jobs_path) %>
     </li>
   </ul>
 </div>
@@ -23,10 +18,10 @@
 <table class="table table-boldered">
   <thead>
     <tr>
-      <td>Job</td>
-      <td>wage_max</td>
-      <td>wage_min</td>
-      <td>update</td>
+      <td>活动名称</td>
+      <td>人均预算</td>
+      <td>活动时间</td>
+      <td>更新时间</td>
     </tr>
   </thead>
 
@@ -40,7 +35,7 @@
       <%= job.wage_upper_bound %>
     </td>
     <td>
-      <%= job.wage_lower_bound %>
+      <%= job.schedule %>
     </td>
     <td>
       <%= job.created_at %>

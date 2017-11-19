@@ -1,5 +1,5 @@
 <div class="pull-right">
-  <%= link_to("Add a job", new_admin_job_path, :class => "btn btn-default") %>
+  <%= link_to("新增活动", new_admin_job_path, :class => "btn btn-info") %>
 </div>
 
 <br><br>
@@ -8,22 +8,22 @@
   <thead>
     <tr>
       <td>
-        职位
+        分类
       </td>
       <td>
-        received_resumes
+        收到的idea
       </td>
       <td>
-        wage_min
+        活动时间
       </td>
       <td>
-        wage_max
+        预算上限
       </td>
       <td>
-        controll
+        管理员选项
       </td>
       <td>
-        update_at
+        刊登时间
       </td>
     </tr>
   </thead>
@@ -36,7 +36,7 @@
       <%= link_to(job.title, admin_job_path(job)) %>
     </td>
     <td><%= link_to(job.resumes.count, admin_job_resumes_path(job)) %></td>
-    <td><%= job.wage_lower_bound %></td>
+    <td><%= job.schedule %></td>
     <td><%= job.wage_upper_bound %></td>
     <td>
       <%= link_to("Edit", edit_admin_job_path(job), :class => "btn btn-xs btn-info") %>
